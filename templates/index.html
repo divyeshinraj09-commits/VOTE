@@ -1,101 +1,165 @@
-QR scan detected
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVYESH.EXE - Candidate Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="app-shell">
+        <div class="noise"></div>
+        <div class="popup-zone" id="popupZone" aria-hidden="true"></div>
+        <div class="vote-rain" id="voteRain" aria-hidden="true"></div>
+        <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
-⚠️ SYSTEM ALERT ⚠️
-You scanned this QR voluntarily 💀
+        <section class="screen active" id="alertScreen" aria-labelledby="alertTitle">
+            <div class="terminal-card alert-card">
+                <p class="chip">QR scan detected</p>
+                <h1 id="alertTitle">⚠️ SYSTEM ALERT ⚠️</h1>
+                <p class="alert-copy">You scanned this QR voluntarily 💀</p>
+                <button class="primary-button" id="enterButton" type="button">ENTER AT YOUR OWN RISK</button>
+            </div>
+        </section>
 
-ENTER AT YOUR OWN RISK
-boot sequence
+        <section class="screen" id="loadingScreen" aria-labelledby="loadingTitle">
+            <div class="terminal-card loading-card">
+                <p class="chip">boot sequence</p>
+                <h2 id="loadingTitle" class="typing-text" data-text="Loading Divyesh.exe..."></h2>
+                <div class="loader"><span></span><span></span><span></span></div>
+                <div class="stats-list">
+                    <div class="stat" data-value="90">
+                        <div class="stat-label"><span>Leadership</span><strong>90%</strong></div>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="stat" data-value="95">
+                        <div class="stat-label"><span>Creativity</span><strong>95%</strong></div>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="stat" data-value="90">
+                        <div class="stat-label"><span>Problem Solving</span><strong>90%</strong></div>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-Leadership90%
-Creativity95%
-Problem Solving90%
-candidate detected
+        <section class="screen" id="campaignScreen" aria-labelledby="candidateTitle">
+            <div class="campaign-layout">
+                <article class="hero-panel section-block">
+                    <p class="chip online">candidate detected</p>
+                    <h2 id="candidateTitle">DIVYESH</h2>
+                    <p class="hero-copy">
+                        <span class="typing-text" data-text="Not here to give a 10-minute speech 💀"></span>
+                        <span>Just here to make things a little better.</span>
+                        <span>A student. Some ideas. One mission.</span>
+                    </p>
+                </article>
 
-DIVYESH
-Just here to make things a little better. A student. Some ideas. One mission.
+                <article class="reward-panel section-block" id="rewardPanel">
+                    <p class="mega-label">🎮 DIVYESH.EXE FOUND</p>
+                    <p>You didn't come here for another "I promise to work hard" speech...</p>
+                    <strong>Good choice.</strong>
+                    <button class="primary-button compact" id="continueButton" type="button">Continue →</button>
+                </article>
 
-🎮 DIVYESH.EXE FOUND
+                <article class="content-panel section-block" id="whySection">
+                    <p class="chip">update notes</p>
+                    <h3>Why this update?</h3>
+                    <p class="section-copy">Because having technology is good... but using it better is better.</p>
+                    <div class="card-grid">
+                        <div class="mini-card"><b>🚀 More creative opportunities</b><span>More chances to build, create and explore</span></div>
+                        <div class="mini-card"><b>👥 Student involvement</b><span>Good ideas should not stay inside classrooms</span></div>
+                        <div class="mini-card"><b>💡 Smarter use of technology</b><span>Making tech more useful, not just available</span></div>
+                        <div class="mini-card"><b>🔥 More innovation</b><span>More activities where students actually create</span></div>
+                    </div>
+                </article>
 
-You didn't come here for another "I promise to work hard" speech...
+                <article class="content-panel section-block promise-panel">
+                    <p class="chip">patch notes</p>
+                    <h3>My impossible promises 💀</h3>
+                    <div class="promise-grid">
+                        <p><span class="no">❌</span> Remove exams <small>tried contacting the authorities... rejected</small></p>
+                        <p><span class="no">❌</span> Unlimited holidays <small>system denied access</small></p>
+                        <p><span class="no">❌</span> Make every Monday disappear <small>still searching for the hack</small></p>
+                    </div>
+                    <h3 class="subhead">The actual update ✅</h3>
+                    <div class="promise-grid actual-grid">
+                        <p><span class="yes">✅</span> More tech & creative activities</p>
+                        <p><span class="yes">✅</span> More student ideas and participation</p>
+                        <p><span class="yes">✅</span> Helping create a better learning environment</p>
+                    </div>
+                </article>
 
-Good choice. Continue →
-update notes
+                <article class="content-panel section-block stats-panel">
+                    <p class="chip online">player stats</p>
+                    <h3>Player Stats 🎮</h3>
+                    <p class="exe-label">DIVYESH.EXE</p>
+                    <div class="pixel-stats">
+                        <p><span>Problem Solving</span><b>████████░░</b></p>
+                        <p><span>Creativity</span><b>█████████░</b></p>
+                        <p><span>Learning Ability</span><b>██████████</b></p>
+                        <p><span>Teamwork</span><b>█████████░</b></p>
+                    </div>
+                </article>
 
-Why this update?
-Because having technology is good... but using it better is better.
+                <article class="builder-panel section-block" id="builderPanel">
+                    <p class="chip">custom build</p>
+                    <h3>🧠 Build Your Perfect IT Head</h3>
+                    <p class="section-copy">What do you want in your IT Head? 👀</p>
+                    <p class="select-copy">Select all that apply</p>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" checked><span><b>💻 Someone who knows tech</b><small>Not someone who asks where the power button is 💀</small></span></label>
+                        <label><input type="checkbox" checked><span><b>🧠 Someone who solves problems</b><small>Because panic mode doesn't fix anything 😭</small></span></label>
+                        <label><input type="checkbox" checked><span><b>💡 Someone with new ideas</b><small>Not copy-paste ideas from 2010 💀</small></span></label>
+                        <label><input type="checkbox" checked><span><b>🎨 Someone creative</b><small>Because boring = cancelled</small></span></label>
+                        <label><input type="checkbox" checked><span><b>🤝 Someone who listens to students</b><small>Not a "seen-zoned" leader 💀</small></span></label>
+                        <label><input type="checkbox" checked><span><b>🚀 Someone who brings new activities</b><small>Because same old stuff needs an update</small></span></label>
+                        <label><input type="checkbox" checked><span><b>😂 Someone who doesn't make boring speeches</b><small>You already know why you are here 👀</small></span></label>
+                    </div>
+                    <button class="primary-button" id="generateButton" type="button">GENERATE MY IT HEAD ⚡</button>
+                </article>
 
-🚀 More creative opportunitiesMore chances to build, create and explore
-👥 Student involvementGood ideas should not stay inside classrooms
-💡 Smarter use of technologyMaking tech more useful, not just available
-🔥 More innovationMore activities where students actually create
-patch notes
+                <article class="terminal-card generator-panel section-block hidden" id="generatorPanel">
+                    <p class="chip">analysis mode</p>
+                    <h3 id="generatorTitle">Analysing your expectations...</h3>
+                    <div class="loader"><span></span><span></span><span></span></div>
+                    <div class="scan-lines" id="scanLines"></div>
+                </article>
 
-My impossible promises 💀
-❌ Remove exams tried contacting the authorities... rejected
+                <article class="result-panel section-block hidden" id="resultPanel">
+                    <p class="chip online">candidate found ✅</p>
+                    <h3>Congratulations 🎉</h3>
+                    <p class="section-copy">You just described:</p>
+                    <h2>DIVYESH 💻</h2>
+                    <div class="result-list">
+                        <p>✅ Tech mindset</p>
+                        <p>✅ Problem solving</p>
+                        <p>✅ Creativity</p>
+                        <p>✅ Student-focused ideas</p>
+                        <p>✅ Innovation mindset</p>
+                    </div>
+                </article>
 
-❌ Unlimited holidays system denied access
+                <article class="final-panel section-block" id="finalPanel">
+                    <p class="mega-label">🚀 VOTE FOR DIVYESH 🚀</p>
+                    <p class="role">For IT HEAD</p>
+                    <p class="tagline">Less boring. More ideas.<br>More creativity. More innovation.</p>
+                    <p class="follow">📸 Instagram: <strong>not_ur_divyeshh</strong></p>
+                    <div class="final-center">
+                        <h2>🚀 DIVYESH 🚀</h2>
+                        <p>Your IT Head Candidate</p>
+                        <strong>"Your choice. Your update."</strong>
+                    </div>
+                    <button class="secondary-button" id="restartButton" type="button">Restart experience</button>
+                </article>
+            </div>
+        </section>
+    </main>
 
-❌ Make every Monday disappear still searching for the hack
-
-The actual update ✅
-✅ More tech & creative activities
-
-✅ More student ideas and participation
-
-✅ Helping create a better learning environment
-
-player stats
-
-Player Stats 🎮
-DIVYESH.EXE
-
-Problem Solving████████░░
-
-Creativity█████████░
-
-Learning Ability██████████
-
-Teamwork█████████░
-
-custom build
-
-🧠 Build Your Perfect IT Head
-What do you want in your IT Head? 👀
-
-Select all that apply
-
-💻 Someone who knows techNot someone who asks where the power button is 💀 🧠 Someone who solves problemsBecause panic mode doesn't fix anything 😭 💡 Someone with new ideasNot copy-paste ideas from 2010 💀 🎨 Someone creativeBecause boring = cancelled 🤝 Someone who listens to studentsNot a "seen-zoned" leader 💀 🚀 Someone who brings new activitiesBecause same old stuff needs an update 😂 Someone who doesn't make boring speechesYou already know why you are here 👀
-GENERATE MY IT HEAD ⚡
-analysis mode
-
-Analysing your expectations...
-candidate found ✅
-
-Congratulations 🎉
-You just described:
-
-DIVYESH 💻
-✅ Tech mindset
-
-✅ Problem solving
-
-✅ Creativity
-
-✅ Student-focused ideas
-
-✅ Innovation mindset
-
-🚀 VOTE FOR DIVYESH 🚀
-
-For IT HEAD
-
-Less boring. More ideas.
-More creativity. More innovation.
-
-📸 Instagram: not_ur_divyeshh
-
-🚀 DIVYESH 🚀
-Your IT Head Candidate
-
-"Your choice. Your update."
-Restart experience
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
